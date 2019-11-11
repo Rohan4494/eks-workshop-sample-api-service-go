@@ -57,15 +57,15 @@ phases:
 #       - cat /root/.kube/config
 #       - kubectl get svc --all-namespaces
       - helm init --client-only --skip-refresh
-#       - echo "Happy Helming"
-#       - helm ls 
-#       - helm lint $CHART_NAME
-#       - |-
-#           if [ "lint" -gt "ok" ]; then
-#             echo "Helm Chart $CHART_NAME is good for dry run"
-#           fi
-#       # - helm upgrade -i install my-grafana grafana
-#       - helm upgrade -i --install --dry-run $RELEASE_NAME $CHART_NAME --namespace $NAMESPACE 
+      - echo "Happy Helming"
+      - helm ls 
+      - helm lint $CHART_NAME
+      - |-
+          if [ "lint" -gt "ok" ]; then
+            echo "Helm Chart $CHART_NAME is good for dry run"
+          fi
+      # - helm upgrade -i install my-grafana grafana
+      - helm upgrade -i --install --dry-run $RELEASE_NAME $CHART_NAME --namespace $NAMESPACE 
 #       # - |-
 #       #     if [ "$CHART_NAME" -gt "ok" ]; then
 #       #       echo "Helm Chart $CHART_NAME is good for dry run"
