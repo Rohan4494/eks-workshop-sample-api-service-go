@@ -70,7 +70,7 @@ phases:
 #       #     if [ "$CHART_NAME" -gt "ok" ]; then
 #       #       echo "Helm Chart $CHART_NAME is good for dry run"
 #       #     fi
-#       - helm upgrade -i --install $RELEASE_NAME $CHART_NAME --namespace $NAMESPACE
+      - helm upgrade -i --install $RELEASE_NAME $CHART_NAME --namespace $NAMESPACE
 # #       - kubectl version --short
 # #       - kubectl get nodes
 # #       - kubectl apply -f hello-k8s.yml
