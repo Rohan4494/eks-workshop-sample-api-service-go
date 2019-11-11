@@ -55,7 +55,7 @@ phases:
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws eks update-kubeconfig --name $EKS_CLUSTER --region $REGION
 #       - cat /root/.kube/config
-      - kubectl get svc --all-namespaces
+#       - kubectl get svc --all-namespaces
       - helm init --client-only --skip-refresh
 #       - echo "Happy Helming"
 #       - helm ls 
